@@ -46,7 +46,7 @@
               </div>
               
               <div class="col col-price col-numeric align-center ">
-                <p id="prix" name="prix">75.84dt</p>
+                <p id="prix" name="prix">75</p>
               </div>
       
               <div class="col col-qty layout-inline">
@@ -63,17 +63,17 @@
                          <script type="text/javascript">
                              function Total(){
                             var tax,qte,price;
-                             tax = document.getElementsByTagName('tax').value; 
+                             tax = document.getElementById('tax').innerHTML; 
 
                              qte = document.getElementById('qte').value; 
 
-                            price = document.getElementById('prix').value; 
+                            price = document.getElementById('prix').innerHTML; 
                             
-                            total = (  qte + tax );
+                            total = (  (parseInt(price) * parseInt(qte)) + parseInt(tax) );
 
                             var tot = parseInt(total);
 
-                            document.getElementById('total').value =tot;
+                            document.getElementById('total').innerHTML =tot;
                         
                             alert(tot)
                             }                 
@@ -91,7 +91,7 @@
               </div>
               
               <div class="col col-price col-numeric align-center ">
-                <p>20.5dt</p>
+                <p>20.50</p>
               </div>
       
               <div class="col col-qty  layout-inline">
@@ -101,7 +101,7 @@
               </div>
               
               <div class="col col-vat col-numeric">
-                <p>20dt</p>
+                <p>20</p>
               </div>
               <div class="col col-total col-numeric">
                 <p>20dt</p>
@@ -137,7 +137,6 @@
              <div class="tf">
                <div class="row layout-inline">
                  <div class="col">
-                   <p>VAT</p>
                  </div>
                  <div class="col"></div>
                </div>
